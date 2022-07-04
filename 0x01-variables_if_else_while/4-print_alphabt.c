@@ -6,14 +6,15 @@
  */
 int main(void)
 {
-char a; for (a = 'a'; a <= 'z'; a++)
-{
-if (a != 'q' && a != 'e')
-{
-a++;
-}
+char alph;
 
-putchar (a);
+for (alph = 'a' ; alph <= 'z' ; alph++)
+{
+if (alph == 'e' || alph == 'q')
+{
+alph++;
 }
+putchar(alph);
+}
+putchar('\n')
 return (0);
-}
