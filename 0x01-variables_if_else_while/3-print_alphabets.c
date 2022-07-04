@@ -1,5 +1,4 @@
 #include <stdio.h>
-c
 /**
   * main - Entry poimt
   *
