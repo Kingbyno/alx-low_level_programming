@@ -1,15 +1,15 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
  * main - Entry point
  *
  * Return: Always 0
  */
 int main(void)
-{
-char a;
-for (a = 'a'; a <= 'z'; a++)
-if (a == 'q' || a == 'e')
-continue;
+{char a; for (a = 'a'; a <= 'z'; a++)
+{if (a == 'q' && a == e)
+{continue;
+}
+}
 putchar (a);
 return (0);
 }
