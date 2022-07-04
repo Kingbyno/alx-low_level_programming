@@ -7,11 +7,11 @@ c
   */
 int main(void)
 {
-char letter;
-for (letter = 'a'; letter <= 'z'; letter++)
-putchar(letter);
-for (letter = 'A'; letter <= 'Z'; letter++)
-putchar(letter);
-putchar('\n');
+char a;
+for (a = 'a'; a <= 'z'; a++)
+putchar(a);
+for (a = 'A'; a <= 'Z'; a++)
+putchar(a);
+putchar ('\n');
 return (0);
 }
