@@ -14,4 +14,6 @@ if (alph == 'e' || alph == 'q')
 {
 putchar(alph);
 }
+}
 return (0);
+}
