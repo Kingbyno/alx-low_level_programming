@@ -12,8 +12,10 @@ for (alph = 'a'; alph <= 'z'; alph++)
 {
 if (alph == 'e' || alph == 'q')
 {
-putchar(alph);
+alph++;
 }
+putchar(alph);
 }
 return (0);
 }
+
