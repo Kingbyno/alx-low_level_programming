@@ -16,7 +16,7 @@ alph++;
 }
 putchar(alph);
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
 
