@@ -9,6 +9,15 @@ int main(void)
 {
 	print _putchar(char c);
 	void print_alphabet(void);
+
+
+
+
+
+
+
+
+	_putchar('\n');
 	return (0);
 
 }
