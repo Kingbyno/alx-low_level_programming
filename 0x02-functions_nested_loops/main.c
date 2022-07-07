@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * main - calls other functions
+ * main - print putchar
  *
  * Return: 0
  */
 int main(void)
 {
-	print _putchar(void);
+	print _putchar(char c);
 
 	return (0);
 
