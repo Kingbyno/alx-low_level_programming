@@ -12,3 +12,4 @@ _putchar(alph);
 }
 
 _putchar('\n');
+}
