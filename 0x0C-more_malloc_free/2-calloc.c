@@ -2,7 +2,8 @@
 #include <stdlib>
 
 /**
- * _calloc -> a function that allocates memory for an array, using malloc
+ * _calloc -> a function that allocates memory for an array, using malloc.
+ *
  * @nmemb: allocated memory of an array
  * @size: element size for bytes
  *
@@ -21,6 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (mem == NULL)
 		return (NULL);
+
 	first = mem;
 
 	for (king = 0; king < (size * nmemb); king++)
