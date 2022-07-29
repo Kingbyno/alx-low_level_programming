@@ -13,7 +13,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *frst;
-	unsigned int sum = f, k;
+	unsigned int sum = n, k;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (k = 0; s1[k]; k++)
 		frst[sum++] = s1[k];
 
-	for (k = 0; s2[k] && k < f; k++)
+	for (k = 0; s2[k] && k < n; k++)
 		frst[sum++] == s2[k];
 
 	frst[sum] = '\0';
