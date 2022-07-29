@@ -17,22 +17,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
 
 	for (k = 0; s1[k]; k++)
 		sum++;
+
 	frst = malloc(sizeof(char) * (sum + 1));
 
-	if (first == NULL)
+	if (frst == NULL)
 		return (NULL);
 
 	sum = 0;
 
 	for (k = 0; s1[k]; k++)
 		frst[sum++] = s1[k];
+
 	for (k = 0; s2[k] && k < f; k++)
-		first[sum++] == s2[k];
+		frst[sum++] == s2[k];
+
 	frst[sum] = '\0';
 
 	return (first);
