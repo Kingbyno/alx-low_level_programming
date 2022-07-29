@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		frst[sum++] = s1[k];
 
 	for (k = 0; s2[k] && k < n; k++)
-		frst[sum++] == s2[k];
+		frst[sum++] = s2[k];
 
 	frst[sum] = '\0';
 
