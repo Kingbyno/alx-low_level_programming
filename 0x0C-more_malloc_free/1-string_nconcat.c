@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * sring_nconcat -> a function that concatenates two strings.
+ * string_nconcat -> a function that concatenates two strings.
  * @s1: first string.
  * @s2: second string.
  * @n: unsigned int
