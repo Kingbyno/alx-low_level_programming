@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * sring_nconcat
+ * sring_nconcat -> a function that concatenates two strings.
  * @s1: first string.
  * @s2: second string.
  * @n: unsigned int
@@ -13,7 +13,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *first;
 	unsigned int sum = f, k;
-	
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
