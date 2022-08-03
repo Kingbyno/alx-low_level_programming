@@ -1,8 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
-
 /**
-  * new_dog - Function for new struct of type dog
+  * new_dog - creates a new struct of type dog
   * @name: struct parameter name
   * @age: struct parameter age
   * @owner: struct parameter owner
@@ -10,32 +9,30 @@
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int newn, oldn, s;
-	dog_t *dogg;
+	int nln, oln, i;
+	dog_t *doggy;
 
-	newn = oldn = 0;
-	while (name[newn++])
+	nln = oln = 0;
+	while (name[nln++])
 		;
-
-	while (owner[oldn++])
+	while (owner[oln++])
 		;
-
-	dogg = malloc(sizeof(dog_t));
-
-	if (dogg == NULL)
+	doggy = malloc(sizeof(dog_t));
+	if (doggy == NULL)
 		return (NULL);
-	dogg->name = malloc(newn * sizeof(name));
-	if (dogg == NULL)
-		return (NULL);
-	for (s = 0; s < newn; s++)
-		dogg->name[s] = name[s];
 
-	dogg->age = age;
-
-	dogg->owner = malloc(oldn * sizeof(owner));
-	if (dogg == NULL)
+	doggy->name = malloc(nln * sizeof(doggy->name));
+	if (doggy == NULL)
 		return (NULL);
-	for (s = 0; s < oldn; s++)
-		dogg->owner[s] = owner[s];
-	return (dogg);
+	for (i = 0; i < nln; i++)
+		doggy->name[i] = name[i];
+
+	doggy->age = age;
+
+	doggy->owner = malloc(oln * sizeof(doggy->owner));
+	if (doggy == NULL)
+		return (NULL);
+	for (i = 0; i < oln; i++)
+		doggy->owner[i] = owner[i];
+	return (doggy);
 }
