@@ -8,7 +8,7 @@
  * @size: size of the array
  * @cmp: a function that a call
  *
- * Return: -1
+ * Return: index of first element for which the cmp function does not return 0
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
