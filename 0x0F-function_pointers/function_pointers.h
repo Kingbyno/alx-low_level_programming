@@ -1,6 +1,7 @@
 #ifndef FUNCTION_POINTER_H
 #define FUNCTION_POINTER_Hi
 #include <stddef.h>
+#include <udis86.h>
 
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
