@@ -13,7 +13,6 @@ size_t listint_len(const listint_t *h)
 		return (0);
 	for (count = 0; h != NULL; count++)
 	{
-		printf("%d\n", h->n);
 		h = h->next;
 	}
 	return (count);
