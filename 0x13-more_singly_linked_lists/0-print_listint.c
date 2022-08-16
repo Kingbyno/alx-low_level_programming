@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t count;
+	int count;
 
 	if (h == NULL)
 		return (0);
