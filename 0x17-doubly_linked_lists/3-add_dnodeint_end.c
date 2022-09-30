@@ -1,50 +1,34 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * add_dnodeint_end - Adds a node to the end of a doubly linked list.
- * @head: Pointer to a pointer to the first node of a linked list.
- * @n: Integer value to add to a linked list node.
- * Return: Upon sucess the address of the new element, otherwise NULL.
+ * add_dnodeint_end - adds a node to the end of a linked list
+ * @head: double pointer to the beginning of the linked list
+ * @n: value to add to new node
+ *
+ * Return: pointer to the new node, or NULL on failure
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *tmp;
-	dlistint_t *new_node;
+	dlistint_t *new, *tmp;
 
 	if (head == NULL)
 		return (NULL);
-
-	tmp = *head;
-	new_node = create_node3(n);
-	if (new_node == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
 		return (NULL);
+	new->n = n;
+	new->next = NULL;
 	if (*head == NULL)
 	{
-		*head = new_node;
-		return (new_node);
+		new->prev = NULL;
+		*head = new;
+		return (new);
 	}
+	tmp = *head;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
-	tmp->next = new_node;
-	new_node->prev = tmp;
-	return (new_node);
-}
-
-
-/**
- * create_node3 - Creates a node.
- * @n: Integer value to add to a linked list node.
- * Return: Upon sucess pointer to a dlistint_t node. Otherwise NULL
- */
-dlistint_t *create_node3(const int n)
-{
-	dlistint_t *new_node;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->prev = NULL;
-	new_node->next = NULL;
-	new_node->n = n;
-	return (new_node);
+	tmp->next = new;
+	new->prev = tmp;
+	return (new);
 }
